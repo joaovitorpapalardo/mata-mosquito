@@ -1,0 +1,130 @@
+/* --Estilo do jogo mata mosquito-- */
+
+html {
+    cursor: url(../assets/imagens/mata_mosquito.png) 30 30, auto;
+}
+
+body {
+    background-image: url(../assets/imagens/bg.jpg);
+    background-size: cover; /* Preencher a tela inteira */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-position: center; /* Centralizar a imagem */
+    height: 100vh; /* Garantir que a altura cubra a tela */
+    margin: 0; /* Remover margens padrão */
+    overflow: hidden; /* Impedir rolagem */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+    width: 100%;
+    height: 100%;
+}
+
+.mosquito1 {
+    width: 10vw; /* Ajusta o tamanho relativo à largura da tela */
+    height: 10vw;
+    max-width: 50px; /* Limita o tamanho máximo */
+    max-height: 50px;
+}
+
+.mosquito2 {
+    width: 12vw;
+    height: 12vw;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.mosquito3 {
+    width: 15vw;
+    height: 15vw;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.mosquito1, .mosquito2, .mosquito3 {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.ladoA {
+    transform: scaleX(1);
+}
+
+.ladoB {
+    transform: scaleX(-1);
+}
+
+.painel {
+    position: fixed; /* Fixa no lugar */
+    bottom: 10px; /* Distância do rodapé */
+    left: 10px; /* Distância do lado direito */
+    width: auto; /* Ajusta largura ao conteúdo */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Arredonda os cantos */
+    border: 1px solid #ff5555; /* Linha ao redor */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo mais escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    font-size: 1.2vw; /* Tamanho do texto proporcional */
+    z-index: 1000; /* Sempre acima de outros elementos */
+    color: #fff;
+}
+.vidas img {
+    width: 3vw; /* Proporcional à tela */
+    height: auto;
+    margin-bottom: 5px; /* Espaçamento entre os ícones */
+    filter: drop-shadow(2px 2px 5px #000); /* Efeito nas vidas */
+}
+
+
+.cronometro {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+button {
+    background-color: #ff5555;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff2222;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.container, .painel {
+    max-width: 100%; /* Limita a largura ao tamanho da tela */
+    overflow: hidden; /* Garante que o conteúdo não cause rolagem */
+}
+
+@media (max-width: 390px) {
+    .painel {
+        width: 90%; /* Reduz o tamanho da barra inferior em telas pequenas */
+        font-size: 0.8rem; /* Diminui o tamanho do texto */
+    }
+
+    .mosquito1, .mosquito2, .mosquito3 {
+        width: 40px; /* Diminui o tamanho dos mosquitos */
+        height: 40px;
+    }
+
+    button {
+        padding: 8px 15px; /* Ajusta o tamanho do botão */
+        font-size: 1rem;
+    }
+}
+
+#mosquito {
+    max-width: 100%;
+    position: absolute;
+}
