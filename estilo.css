@@ -1,11 +1,11 @@
 /* --Estilo do jogo mata mosquito-- */
 
 html {
-    cursor: url(imagens/mata_mosquito.png) 30 30, auto;
+    cursor: url(../assets/imagens/mata_mosquito.png) 30 30, auto;
 }
 
 body {
-    background-image: url(imagens/bg.jpg);
+    background-image: url(../assets/imagens/bg.jpg);
     background-size: cover; /* Preencher a tela inteira */
     background-repeat: no-repeat; /* Não repetir a imagem */
     background-position: center; /* Centralizar a imagem */
